@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 120px;
+  margin: 0;
+}
+
+.row {
+}
+
+.tile {
+  border: 10px solid white;
+  height: 200px;
+  width: 200px;
+  padding: 0;
+  display: inline-block;
+
+  color: white;
+  font-size: 150px;
+  font-weight: bold;
+  line-height: 200px;
+  vertical-align: middle;
+}
