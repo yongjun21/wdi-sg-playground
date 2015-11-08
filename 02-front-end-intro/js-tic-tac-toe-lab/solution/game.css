@@ -7,15 +7,13 @@ body {
 
 h1 {
   color: white;
-  font-size: 120px;
-  margin: 0;
-}
-
-.row {
+  font-size: 100px;
+  margin: 10px 0;
 }
 
 .tile {
-  border: 10px solid white;
+  border-bottom: 20px solid white;
+  border-right: 20px solid white;
   height: 200px;
   width: 200px;
   padding: 0;
@@ -26,4 +24,12 @@ h1 {
   font-weight: bold;
   line-height: 200px;
   vertical-align: middle;
+}
+
+.r3 {
+  border-bottom: 0;
+}
+
+.c3 {
+  border-right: 0;
 }
