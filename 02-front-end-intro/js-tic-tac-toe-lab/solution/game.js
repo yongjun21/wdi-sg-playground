@@ -24,7 +24,7 @@ var title = document.querySelector('h1');
 var listener = function (event) {
   console.log(event);
   var tile = event.target;
-  if (tile.classList[0] !== 'tile') return;
+  if (!tile.classList.contains('tile')) return;
   if (tile.textContent) return;
   tile.textContent = player ? 'O' : 'X';
   var r = parseInt(tile.classList[1][1], 10) - 1;
@@ -32,14 +32,10 @@ var listener = function (event) {
   boardStateA[r][c] = player;
   boardStateB[r][c] = !player;
   console.log(boardStateA);
-  if (winner(boardStateA)) {
-    title.textContent = 'Player One Wins';
+  if (winner(player ? boardStateA : boardStateB)) {
+    title.textContent = 'Player ' + (player ? 'One' : 'Two') + ' Wins';
     body.removeEventListener('click', listener);
-    body.addEventListener('click', f => window.location.reload());
-  } else if (winner(boardStateB)) {
-    title.textContent = 'Player Two Wins';
-    body.removeEventListener('click', listener);
-    body.addEventListener('click', f => window.location.reload());
+    body.addEventListener('click', () => window.location.reload());
   }
   player = !player;
 };
