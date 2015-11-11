@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-family: helvetica;
+  font-size: 100px;
+  margin: 10px 0;
+}
+
+.playground {
+  margin: 0 auto;
+  width: 1010px;
+  height: 610px;
+  border: 25px solid white;
+  padding: 5px;
+  position: relative;
+}
